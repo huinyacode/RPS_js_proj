@@ -7,6 +7,7 @@ const computerChoice = document.getElementById("computer");
 const result = document.getElementById("win");
 const hu_count = document.getElementById("player_counter");
 const co_count = document.getElementById("computer_counter");
+const rest = document.getElementById("res");
 function getConmputerChoice() {
     HumanChoice.textContent = choice;
     a = Math.round(Math.random() * 3);
@@ -52,8 +53,15 @@ function counter(a) {
 
 }
 
+function restart() 
+{
+        hu_count.textContent = 0;
+        co_count.textContent = 0;
+}
+
 
 rock.addEventListener('click', () => {choice ="Rock"; getConmputerChoice()});
 paper.addEventListener('click', () => { choice = "Paper"; getConmputerChoice()});
 scissors.addEventListener('click', () => {choice = "Scissors"; getConmputerChoice()});
  
+rest.addEventListener('click', () => { restart();});
